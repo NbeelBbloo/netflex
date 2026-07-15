@@ -1,15 +1,15 @@
-# استخدام بيئة بايثون جاهزة ومدمج معها متصفحات Playwright رسمياً
+# Base image with Playwright
 FROM mcr.microsoft.com/playwright/python:v1.49.0-jammy
 
-# تحديد مسار العمل داخل السيرفر
+# Set working directory
 WORKDIR /app
 
-# نسخ ملف المتطلبات وتثبيت مكتبة التيليجرام
+# Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# نسخ كود البوت إلى السيرفر
+# Copy bot code
 COPY . .
 
-# أمر تشغيل البوت
+# Run the bot
 CMD ["python", "main.py"]
