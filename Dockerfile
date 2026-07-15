@@ -1,4 +1,4 @@
-here# استخدام بيئة بايثون جاهزة ومدمج معها متصفحات Playwright رسمياً
+# استخدام بيئة بايثون جاهزة ومدمج معها متصفحات Playwright رسمياً
 FROM mcr.microsoft.com/playwright/python:v1.49.0-jammy
 
 # تحديد مسار العمل داخل السيرفر
